@@ -1,22 +1,17 @@
-# These and other macros are documented in dhd/droid-hal-device.inc
 # Feel free to cleanup this file by removing comments, once you have memorised them ;)
 
 %define device a5y17lte
 %define vendor samsung
 
+# Manufacturer and device name to be shown in UI
 %define vendor_pretty Samsung
 %define device_pretty Galaxy A5 2017
 
-%define installable_zip 1
+# See ../droid-hal-version/droid-hal-device.inc for similar macros:
+%define have_vibrator_native 1
+%define have_led 1
 
-%define droid_target_aarch64 1
-
-%define android_config \
-#define MALI_QUIRKS 1\
-%{nil}
-
-
-%include rpm/dhd/droid-hal-device.inc
+%include hybris/droid-hal-version-a5y17lte/droid-hal-version/droid-hal-version.inc
 
 # IMPORTANT if you want to comment out any macros in your .spec, delete the %
 # sign, otherwise they will remain defined! E.g.:
